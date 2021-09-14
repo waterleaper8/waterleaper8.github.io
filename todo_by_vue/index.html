@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todoリスト by Vue.js</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app" class="container p-4 align-items-center">
+    <div class="row border-bottom justify-content-center mb-3">
+      <h1 class="col-6 col-lg-4 fw-bold">
+        My Todos <span class="info fs-5 fw-normal text-secondary">({{ remaining.length }}/{{ todos.length }})</span>
+      </h1>
+      <div class="col-6 col-lg-4 text-end">
+        <button class="btn btn-danger" @click="purge">一括削除</button>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 col-lg-4 my-3 text-center">
+        <form class="input-group" @submit.prevent='addItem'>
+          <input type="text" v-model='newItem' class="form-control border-3" id="input">
+          <button class="btn btn-success" type="submit" value="Add">追加</button>
+        </form>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <ul v-if="todos.length" class="fs-3">
+          <li v-for='(todo, index) in todos'>
+            <input type="checkbox" v-model='todo.isDone'>
+            <span :class="{done: todo.isDone}" @click="toggle('method', $event)" class="title">{{ todo.title }}</span>
+            <span @click='deleteItem(index)' class='command'><i class="far fa-trash-alt"></i> </span>
+          </li>
+        </ul>
+        <ul class="fs-3" v-else>
+          <li>すべてやりきりました！</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
