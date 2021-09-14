@@ -1,0 +1,57 @@
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand fs-2 pb-2" href="/horse_prediction/index.html">Horse Prediction</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse fs-5" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/horse_prediction/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/horse_prediction/about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="/horse_prediction/product/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Product
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/horse_prediction/product/predict.html">Horse Prediction</a></li>
+                  <li><a class="dropdown-item" href="/horse_prediction/product/detect.html">異常オッズ検知</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html" tabindex="-1" aria-disabled="true">Portfolio</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <script>
+        $(function(){
+
+          var pageURL = location.pathname,
+          pageURLArr = pageURL.split('/'), //パスを分割して配列化する
+          pageURLArrCategory = pageURLArr[2]; //パスから第1階層を取得
+        
+          $('a.nav-link').each(function (i, v) {
+            var selfhref = $(v).attr('href'),
+              hrefArr = selfhref.split('/'), //href属性の値を分割して配列化する
+              hrefArrCategory = hrefArr[2]; //href属性の第1階層を取得
+        
+            //パスの第1階層とhref属性の第1階層を比較して同じ値であればcurrentを付与する
+            if (pageURLArrCategory === hrefArrCategory) {
+              $(v).addClass('active');
+            }
+        
+          });
+        
+        });
+      </script>
