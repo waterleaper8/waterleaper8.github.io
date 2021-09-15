@@ -58,7 +58,8 @@ h1 {
   z-index: 1;
 }
 
-@media (max-width: 768px) {
+/* スマホ用 */
+@media (max-width: 1024px) {
   .left_box {
     display: none;
   }
@@ -73,6 +74,8 @@ h1 {
   }
 
   h1 {
+    font-size: 2.8rem;
+    font-weight: 300;
     position: absolute;
     width: 80%;
     top: 50%;
@@ -88,25 +91,24 @@ h1 {
   }
 
   .sp_para {
+    font-size: 1.6rem;
     background-color: #333;
     color: white;
-    padding: 18px 24px 60px;
+    padding: 18px 36px 60px;
   }
 
   .sp_para p {
     letter-spacing: 0.2rem;
-    line-height: 2;
+    line-height: 1.8;
   }
 }
 
 /* 波アニメーション PC用 */
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   .sp_para {
     display: none;
   }
-}
 
-@media (min-width: 1025px) {
   .shapedividers_com-3267 {
     overflow: hidden;
     position: relative;
@@ -148,8 +150,15 @@ h1 {
   }
 }
 
-/* 波アニメーション スマホ用 */
-@media (max-width: 768px) {
+/* 波アニメーション スマホ・タブレット用 */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .sp_para {
+    font-size: 1.4rem;
+  }
 
   .shapedividers_com-1186 {
     overflow: hidden;
@@ -178,5 +187,17 @@ h1 {
     100% {
       transform: scaleX(4) translateX(calc(100% - (100% / 4)));
     }
+  }
+}
+
+
+/* スマホ用 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .sp_para {
+    font-size: 1.2rem;
   }
 }
