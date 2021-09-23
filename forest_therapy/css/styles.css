@@ -1,6 +1,4 @@
 body {
-  display: none;
-  margin: 0;
   font-family:
     "Helvetica Neue",
     Arial,
@@ -10,15 +8,50 @@ body {
     sans-serif;
 }
 
-h1 {
-  margin: 0;
+.container {
+  overflow: hidden;
+}
+
+/* ローディング画面 */
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color: #555;
+  /* 以下のコードを追加 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.spinner {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: calc(50% - 100px/2);
+  left: calc(50% - 100px/2);
+  background-color: #fff;
+  border-radius: 100%;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+/* ローディングアニメーション */
+@keyframes sk-scaleout {
+  0% {
+    transform: scale(0);
+  } 100% {
+    transform: scale(1.0);
+    opacity: 0;
+  }
 }
 
 .c-video {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 
 .title_box {
@@ -65,7 +98,59 @@ h1 {
   z-index: 1;
 }
 
-/* スマホ用 */
+.box_wrapper {
+  box-shadow: 0px 0px 25px -5px #555;
+  background-color: #333;
+  color: white;
+  margin: 120px auto 0;
+  width: 1140px;
+  display: flex;
+}
+
+.box_wrapper:last-child {
+  margin-bottom: 120px;
+}
+
+.box_left {
+  letter-spacing: 0.2em;
+  line-height: 1.7;
+  padding: 48px;
+  width: 50%;
+}
+
+.box_left h2 {
+  margin-bottom: 24px;
+}
+
+.box_left p {
+  text-indent: 1em;
+  margin-top: 12px;
+}
+
+.box_right {
+  width: 50%;
+  height: 610px;
+  background-size: cover;
+  background-position: center;
+}
+
+.kv01 {
+  background-image: url(../assets/box_img01.jpeg);
+}
+
+.kv02 {
+  background-image: url(../assets/box_img02.jpeg);
+}
+
+.kv03 {
+  background-image: url(../assets/box_img03.jpeg);
+}
+
+.even {
+  flex-direction: row-reverse;
+}
+
+/* タブレット用スタイル */
 @media (max-width: 1024px) {
   .left_box {
     display: none;
@@ -107,6 +192,46 @@ h1 {
   .sp_para p {
     letter-spacing: 0.2rem;
     line-height: 1.8;
+  }
+
+  .box_wrapper {
+    width: 80%;
+    flex-direction: column;
+  }
+
+  .box_left {
+    width: 100%;
+  }
+
+  .box_right {
+    width: 100%;
+  }
+}
+
+/* スマホ用 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .sp_para p {
+    font-size: 1rem;
+  }
+
+  .box_wrapper {
+    width: 100%;
+  }
+
+  .box_wrapper p {
+    font-size: 1rem;
+  }
+
+  .box_right {
+    height: 420px;
   }
 }
 
@@ -194,17 +319,5 @@ h1 {
     100% {
       transform: scaleX(4) translateX(calc(100% - (100% / 4)));
     }
-  }
-}
-
-
-/* スマホ用 */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  .sp_para {
-    font-size: 1.2rem;
   }
 }

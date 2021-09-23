@@ -26,9 +26,10 @@ h2 {
   background-image: url(../img/run.jpg);
   background-size: cover;
   background-position-x: 50%;
+  background-position-y: 50%;
   width: 100%;
   width:var(--vw);
-  height: 80vh;
+  height: 900px;
   position: relative;
 }
 
@@ -53,7 +54,7 @@ h2 {
   position: relative;
   width: 100%;
   width:var(--vw);
-  height: 30vh;  
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,7 +70,7 @@ h2 {
   background-size: cover;
   width: 100%;
   width:var(--vw);
-  height: 80vh;
+  height: 960px;
 }
 
 .mv01 {
@@ -136,11 +137,11 @@ h2 {
 .product {
   position: relative;
   background-image: url(../img/shoes.jpg);
-  background-size: 160%;
+  background-size: 120%;
   background-position: 50%;
   width: 100%;
   width:var(--vw);
-  height: 80vh;
+  height: 900px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -211,8 +212,9 @@ button {
   top: 2px;
 }
 
+/* スマホ用  */
+/* 599pxまでの幅の場合に適応される */
 @media screen and (max-width: 576px) {
-  /* 599pxまでの幅の場合に適応される */
 
   .kv {
     height: 60vh;
@@ -263,8 +265,9 @@ button {
   }
 }
 
+/* タブレット用 */
+/* 1024pxまでの幅の場合に適応される */
 @media screen and (min-width:577px) and (max-width: 1024px) {
-  /* 1024pxまでの幅の場合に適応される */
   .kv {
     height: 90vw;
   }
