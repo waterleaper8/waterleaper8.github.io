@@ -1,7 +1,7 @@
-
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
   const spinner = document.getElementById('loading');
-  setTimeout(() => {
-    spinner.classList.add('loaded');
-  }, 2000);
-}
+  const video = document.getElementById('video');
+  video.addEventListener('canplay', function() {
+      spinner.classList.add('loaded');
+  }, false);
+}, false);
