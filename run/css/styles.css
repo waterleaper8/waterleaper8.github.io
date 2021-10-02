@@ -23,7 +23,7 @@ h2 {
 }
 
 .kv {
-  background-image: url(../img/run.jpg);
+  background-image: url(../assets/run.jpg);
   background-size: cover;
   background-position-x: 50%;
   background-position-y: 50%;
@@ -74,7 +74,7 @@ h2 {
 }
 
 .mv01 {
-  background-image: url(../img/sunset.jpg);
+  background-image: url(../assets/sunset.jpg);
   background-position-x: 50%;
 }
 
@@ -103,7 +103,7 @@ h2 {
 }
 
 .mv02 {
-  background-image: url(../img/shout.jpg);
+  background-image: url(../assets/shout.jpg);
   background-position-x: 10%;
 }
 
@@ -136,7 +136,7 @@ h2 {
 
 .product {
   position: relative;
-  background-image: url(../img/shoes.jpg);
+  background-image: url(../assets/shoes.jpg);
   background-size: 120%;
   background-position: 50%;
   width: 100%;
