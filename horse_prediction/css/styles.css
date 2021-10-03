@@ -72,6 +72,11 @@ li.nav-item {
   transform: translateY(0);
 }
 
+i.bi-arrow-right-square-fill:hover {
+  transition: opacity .5s;
+  opacity: 0.7;
+}
+
 #footer {
   height: 150px;
 }
