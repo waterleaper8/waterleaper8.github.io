@@ -72,7 +72,7 @@ li.nav-item {
   transform: translateY(0);
 }
 
-i.bi-arrow-right-square-fill:hover {
+a.text-decoration-none:hover {
   transition: opacity .5s;
   opacity: 0.7;
 }
