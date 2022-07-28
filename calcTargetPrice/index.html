@@ -33,7 +33,7 @@
           placeholder="取得価額を入力してください"
           aria-label="purchasePrice"
           aria-describedby="basic-addon1"
-          oninput="calcTargetPrice()"
+          oninput="onChangeHandler()"
         />
       </div>
       <div class="input-group mb-3">
@@ -42,7 +42,7 @@
           for="inputGroupSelect01"
           >利確ライン（％）</label
         >
-        <select class="form-select" id="upperLine">
+        <select class="form-select" id="upperLine" onchange="onChangeHandler()">
           <option value="1.005">+0.5%</option>
           <option value="1.010">+1.0%</option>
           <option value="1.015">+1.5%</option>
@@ -71,7 +71,7 @@
           for="inputGroupSelect02"
           >損切りライン（％）</label
         >
-        <select class="form-select" id="lowerLine">
+        <select class="form-select" id="lowerLine" onchange="onChangeHandler()">
           <option value="-0.005">-0.5%</option>
           <option value="-0.010">-1.0%</option>
           <option value="-0.015">-1.5%</option>
