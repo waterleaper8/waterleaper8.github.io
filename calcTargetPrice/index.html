@@ -20,27 +20,25 @@
     ></script>
   </head>
   <body>
-    <div class="container col-lg-6 col-sm-8">
+    <div class="container col-lg-6 col-md-7 col-sm-12">
       <h1 class="py-3 text-center">利確・損切りライン 計算機</h1>
       <div class="input-group mb-4">
-        <span class="input-group-text col-md-2 col-sm-5" id="basic-addon1"
-          >平均取得価額（￥）</span
+        <span class="input-group-text col-md-5" id="basic-addon1"
+          >平均取得価額 (￥)</span
         >
         <input
           id="purchasePrice"
           type="number"
           class="form-control"
-          placeholder="取得価額を入力してください"
+          placeholder="取得価額を入力"
           aria-label="purchasePrice"
           aria-describedby="basic-addon1"
           oninput="onChangeHandler()"
         />
       </div>
       <div class="input-group mb-3">
-        <label
-          class="input-group-text col-md-2 col-sm-5"
-          for="inputGroupSelect01"
-          >利確ライン（％）</label
+        <label class="input-group-text col-md-5" for="inputGroupSelect01"
+          >利確ライン (％)</label
         >
         <select class="form-select" id="upperLine" onchange="onChangeHandler()">
           <option value="1.005">+0.5%</option>
@@ -66,10 +64,8 @@
         </select>
       </div>
       <div class="input-group mb-3">
-        <label
-          class="input-group-text col-md-2 col-sm-5"
-          for="inputGroupSelect02"
-          >損切りライン（％）</label
+        <label class="input-group-text col-md-5" for="inputGroupSelect02"
+          >損切りライン (％)</label
         >
         <select class="form-select" id="lowerLine" onchange="onChangeHandler()">
           <option value="-0.005">-0.5%</option>
