@@ -20,11 +20,31 @@
     ></script>
   </head>
   <body>
-    <div class="container col-lg-6 col-md-7 col-sm-12">
+    <div class="container col-lg-6 col-md-8 col-sm-12 position-relative">
+      <!-- <div
+        class="alert alert-warning position-absolute top-0 w-100"
+        role="alert"
+      >
+        入力欄を埋めてください
+      </div> -->
+
       <h1 class="py-3 text-center">利確・損切りライン 計算機</h1>
       <div class="input-group mb-4">
+        <span class="input-group-text col-lg-3 col-md-5">銘柄</span>
+        <input
+          id="stockName"
+          type="text"
+          class="form-control"
+          placeholder="銘柄を入力"
+          aria-label="purchasePrice"
+          aria-describedby="basic-addon1"
+          oninput="onChangeHandler()"
+          onfocus="this.select()"
+        />
+      </div>
+      <div class="input-group mb-4">
         <span class="input-group-text col-lg-3 col-md-5" id="basic-addon1"
-          >平均取得価額 (￥)</span
+          >平均取得価額 (&yen;)</span
         >
         <input
           id="purchasePrice"
@@ -34,13 +54,14 @@
           aria-label="purchasePrice"
           aria-describedby="basic-addon1"
           oninput="onChangeHandler()"
+          onfocus="this.select()"
         />
       </div>
       <div class="input-group mb-3">
         <label
           class="input-group-text col-lg-3 col-md-5"
           for="inputGroupSelect01"
-          >利確ライン (％)</label
+          >利確ライン (%)</label
         >
         <select class="form-select" id="upperLine" onchange="onChangeHandler()">
           <option value="1.005">+0.5%</option>
@@ -69,7 +90,7 @@
         <label
           class="input-group-text col-lg-3 col-md-5"
           for="inputGroupSelect02"
-          >損切りライン (％)</label
+          >損切りライン (%)</label
         >
         <select class="form-select" id="lowerLine" onchange="onChangeHandler()">
           <option value="-0.005">-0.5%</option>
@@ -94,12 +115,32 @@
           <option value="-0.100">-10.0%</option>
         </select>
       </div>
-      <dl id="result" class="h4">
-        <dt class="text-danger">利確ライン</dt>
-        <dd id="result__upper" class="mb-3 odometer">0</dd>
-        <dt class="text-primary">損切りライン</dt>
-        <dd id="result__lower" class="odometer">0</dd>
-      </dl>
+      <div
+        id="result"
+        class="my-4 h4 d-flex justify-content-around align-items-center"
+      >
+        <div class="result__upper-box">
+          <div class="text-danger">利確ライン</div>
+          <div id="result__upper" class="oddiveter">0</div>
+        </div>
+        <div class="result__lower-box">
+          <div class="text-primary">損切りライン</div>
+          <div id="result__lower" class="odometer">0</div>
+        </div>
+        <div class="text-center">
+          <button type="button" class="btn btn-primary" onclick="addData()">
+            追加
+          </button>
+        </div>
+      </div>
+      <div
+        class="stock-data d-flex justify-content-evenly flex-wrap"
+        id="stock-data"
+      >
+        <div class="card invisible" id="card-last" style="width: 17rem">
+          <div class="card-body"></div>
+        </div>
+      </div>
     </div>
     <footer>
       <div class="container col-lg-6 col-sm-8 text-end">
@@ -113,6 +154,8 @@
       </div>
     </footer>
     <script src="./calc.js"></script>
+    <script src="./data.js"></script>
+    <script src="./uuid-v4.js"></script>
     <!-- <script src="./odometer.min.js"></script> -->
   </body>
 </html>
