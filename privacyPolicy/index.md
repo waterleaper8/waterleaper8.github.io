@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Privacy policy for Chrome extensions developed by test
+title: Privacy policy for Chrome extensions developed by waterleaper
 ---
 
-# Privacy policy for Chrome extensions developed by test
+# Privacy policy for Chrome extensions developed by waterleaper
 
 ## Chrome 拡張のプライバシーポリシー
 
-本プライバシーポリシーは、test（以下、「当開発者」）が開発した GoogleChrome の拡張機能(Extension)(以下、「拡張機能」とします。)の利用において、利用者の個人情報もしくはそれに準ずる情報を取り扱う際に、当開発者が遵守する方針を示したものです。
+本プライバシーポリシーは、waterleaper（以下、「当開発者」）が開発した GoogleChrome の拡張機能(Extension)(以下、「拡張機能」とします。)の利用において、利用者の個人情報もしくはそれに準ずる情報を取り扱う際に、当開発者が遵守する方針を示したものです。
 
 ### 基本方針
 
