@@ -1,0 +1,24 @@
+h1 > .h1 {
+  text-shadow: black 0px 0px 0.5px, black 0px 0px 0.5px;
+}
+
+.tracking-box {
+  width: 200px;
+}
+
+/* .tracking-box-yamato .tracking-carrier {
+  color: rgb(232 180 24);
+} */
+
+.tracking-box a {
+  visibility: hidden;
+  height: 20px;
+}
+
+footer {
+  background-color: #ececec;
+}
+
+footer a {
+  color: #717171;
+}
