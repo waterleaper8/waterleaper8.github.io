@@ -10,9 +10,27 @@ table {
   text-align: left;
 }
 
+thead {
+  border-top: 1px solid #bbb;
+}
+
+tbody {
+  border-bottom: 1px solid #bbb;
+}
+
+table th {
+  font-weight: bold;
+}
+
 table th,
 table td {
   padding: 10px;
+  border-left: 1px solid #bbb;
+}
+
+table th:last-child,
+table td:last-child {
+  border-right: 1px solid #bbb;
 }
 
 table tr:nth-child(odd) {
@@ -29,6 +47,6 @@ table tr:nth-child(odd) {
   font-size: 1.4em;
   text-decoration: underline;
   text-underline-offset: 5px;
-  text-align: center;
+  text-align: left;
   background-color: #d5d5d5;
 }
