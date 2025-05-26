@@ -50,3 +50,11 @@ table tr:nth-child(odd) {
   text-align: left;
   background-color: #d5d5d5;
 }
+
+footer {
+  background-color: #ececec;
+}
+
+footer a {
+  color: #717171;
+}
