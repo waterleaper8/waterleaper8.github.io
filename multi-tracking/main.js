@@ -7,7 +7,8 @@ function inputChanged(_trackingNo, carrier) {
 
   if (carrier === "japanpost") {
     if(/^\d{10,13}$/.test(trackingNo)) {
-      japanpostAnchor.textContent = trackingNo
+      // japanpostAnchor.textContent = trackingNo
+      japanpostAnchor.textContent = "追跡"
       japanpostAnchor.setAttribute("href", `https://www.post.japanpost.jp/receive/tracking/result.php?code=${trackingNo}`)
       japanpostAnchor.style.visibility = "visible"
     } else {
@@ -16,7 +17,8 @@ function inputChanged(_trackingNo, carrier) {
   }
   if (carrier === "yamato") {
     if (/^\d{10,13}$/.test(trackingNo)) {
-      yamatoAnchor.textContent = trackingNo
+      // yamatoAnchor.textContent = trackingNo
+      yamatoAnchor.textContent = "追跡"
       yamatoAnchor.setAttribute("href", `https://member.kms.kuronekoyamato.co.jp/parcel/detail?pno=${trackingNo}`)
       yamatoAnchor.style.visibility = "visible"
     } else {
