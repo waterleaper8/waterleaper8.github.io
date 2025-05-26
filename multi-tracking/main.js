@@ -25,7 +25,8 @@ function inputChanged(_trackingNo, carrier) {
   }
   if (carrier === "sagawa") {
     if (/^\d{10,13}$/.test(trackingNo)) {
-    sagawaAnchor.textContent = trackingNo
+    // sagawaAnchor.textContent = trackingNo
+    sagawaAnchor.textContent = "追跡"
     sagawaAnchor.setAttribute("href", `https://k2k.sagawa-exp.co.jp/p/web/okurijosearch.do?okurijoNo=${trackingNo}`)
     sagawaAnchor.style.visibility = "visible"
     } else {
