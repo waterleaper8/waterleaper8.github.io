@@ -62,7 +62,7 @@
           for="inputGroupSelect01"
           >利確ライン (%)</label
         >
-        <select class="form-select" id="upperLine" onchange="onChangeHandler()">
+        <select class="form-select text-secondary" id="upperLine" onchange="onChangeHandler()">
           <option value="1.005">+0.5%</option>
           <option value="1.010">+1.0%</option>
           <option value="1.015">+1.5%</option>
@@ -91,7 +91,7 @@
           for="inputGroupSelect02"
           >損切りライン (%)</label
         >
-        <select class="form-select" id="lowerLine" onchange="onChangeHandler()">
+        <select class="form-select text-secondary" id="lowerLine" onchange="onChangeHandler()">
           <option value="-0.005">-0.5%</option>
           <option value="-0.010">-1.0%</option>
           <option value="-0.015">-1.5%</option>
@@ -120,11 +120,11 @@
       >
         <div class="result__upper-box">
           <div class="text-danger">利確ライン</div>
-          <div id="result__upper" class="oddiveter">0</div>
+          <div id="result__upper" class="oddiveter text-secondary">0</div>
         </div>
         <div class="result__lower-box">
           <div class="text-primary">損切りライン</div>
-          <div id="result__lower" class="odometer">0</div>
+          <div id="result__lower" class="odometer text-secondary">0</div>
         </div>
         <div class="text-center">
           <button type="button" class="btn btn-primary" onclick="addData()">
