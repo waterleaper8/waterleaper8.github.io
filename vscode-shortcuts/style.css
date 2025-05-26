@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap');
 
-html, body, h1, h2, h3, h4, h5, h6, p, a, li, span, th, td {
+html, body, h1, h2, h3, h4, h5, h6, p, a, li, span, td, th {
   letter-spacing: .1em;
   font-family: "Zen Maru Gothic", helvetica, "Segoe UI", 游ゴシック体, YuGothic, "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif!important;
 }
