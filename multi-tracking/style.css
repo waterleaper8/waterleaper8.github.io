@@ -1,13 +1,13 @@
-/* @import url('https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&family=BIZ+UDPGothic:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&family=BIZ+UDPGothic:wght@400;700&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
 
-html, body, h1, h2, h3, h4, h5, h6, p, a, li {
+html, body, h1, h2, h3, h4, h5, h6, p, a, li, span {
   letter-spacing: .1em;
-  font-family: "BIZ UDPGothic", helvetica, "Segoe UI", 游ゴシック体, YuGothic, "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif!important;
-} */
+  font-family: "Zen Maru Gothic", "BIZ UDPGothic", helvetica, "Segoe UI", 游ゴシック体, YuGothic, "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif!important;
+}
 
 h1 > .h1 {
-  /* font-weight: bold; */
-  text-shadow: black 0px 0px 0.5px, black 0px 0px 0.5px;
+  font-weight: 700;
+  /* text-shadow: black 0px 0px 0.5px, black 0px 0px 0.5px; */
 }
 
 .tracking-box {
