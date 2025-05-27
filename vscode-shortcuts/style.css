@@ -33,6 +33,10 @@ table th {
   font-weight: bold;
 }
 
+table tr:not(.imp) td:not(.sp) {
+  text-shadow: black 0px 0px 0.5px, black 0px 0px 0.5px;
+}
+
 table th,
 table td {
   padding: 10px;
@@ -47,8 +51,11 @@ table td:last-child {
 table tr:nth-child(odd) {
   background-color: #eee;
 }
-.bold {
-  font-weight: 600;
+.bold:not(.imp) {
+  text-shadow: black 0px 0px 0.5px, black 0px 0px 0.5px;
+}
+.bold.imp td {
+  text-shadow: red 0px 0px 0.5px, red 0px 0px 0.5px;
 }
 .imp {
   color: red;
