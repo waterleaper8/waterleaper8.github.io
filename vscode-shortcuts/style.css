@@ -11,6 +11,11 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, li, span, td, th, input {
 h1 {
   font-weight: 700!important;
 }
+@media (max-width: 480px) {
+  h1 img[alt="VS Code"] {
+    width: 36px;
+  }
+}
 
 table {
   width: 100%;
