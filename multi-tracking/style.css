@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=BIZ+UDGothic:wght@400;700&family=BIZ+UDPGothic:wght@400;700&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
-
 html, body, h1, h2, h3, h4, h5, h6, p, a, li, span, td, th, input {
   letter-spacing: .1em;
   font-family: Inter, "Zen Maru Gothic", "BIZ UDPGothic", helvetica, "Segoe UI", 游ゴシック体, YuGothic, "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif!important;
@@ -21,12 +19,4 @@ h1 > .h1 {
 .tracking-box a {
   visibility: hidden;
   height: 20px;
-}
-
-footer {
-  background-color: #ececec;
-}
-
-footer a {
-  color: #717171;
 }

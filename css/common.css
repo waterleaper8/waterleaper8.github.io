@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=M+PLUS+1:wght@100..900&family=BIZ+UDPGothic:wght@400;700&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+
+.scroll-wrapper {
+  overflow: auto;
+  scrollbar-gutter: stable;
+}
+
+/* 初期状態では非表示に */
+html { visibility: hidden; }
+/* “fonts-loaded” クラスが付与されたら表示 */
+html.fonts-loaded { visibility: visible; }
+
+footer {
+  background-color: #ececec;
+}
+footer p {
+  height: 30px;
+}
+footer a {
+  color: #717171;
+  font-family: "Zen Maru Gothic"!important;
+}
