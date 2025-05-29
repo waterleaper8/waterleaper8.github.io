@@ -34,6 +34,11 @@ function addDays(monthDiff) {
     const tr = document.createElement('tr');
     const td = document.createElement('td');
     td.textContent = `${mm}/${dd}(${wd})`;
+    if (wd === "土") {
+      td.classList.add("text-primary")
+    } else if (wd === "日") {
+      td.classList.add("text-danger")
+    }
     tr.appendChild(td);
     calendarBody.appendChild(tr);
   }
