@@ -7,6 +7,9 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, li, span, td, th, input {
   max-width: 840px;
 }
 
+.table-wrapper {
+  margin-bottom: 24px;
+}
 tr {
   font-size: 13px;
 }

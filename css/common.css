@@ -16,7 +16,7 @@ html { visibility: hidden; }
 html.fonts-loaded { visibility: visible; }
 
 body {
-  padding-bottom: 38.5px;
+  padding-bottom: 42px;
 }
 
 footer {
@@ -31,5 +31,5 @@ footer a {
 }
 
 .shadow-bold {
-  text-shadow: black 0px 0px 0.5px, black 0px 0px 0.5px;
+  text-shadow: black 0px 0px 0.5px, black 0px 0px 0.5px!important;
 }

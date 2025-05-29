@@ -5,16 +5,11 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, li, span, td, th, input {
 
 h1 > .h1 {
   font-weight: 700;
-  /* text-shadow: black 0px 0px 0.5px, black 0px 0px 0.5px; */
 }
 
 .tracking-box {
   width: 200px;
 }
-
-/* .tracking-box-yamato .tracking-carrier {
-  color: rgb(232 180 24);
-} */
 
 .tracking-box a {
   visibility: hidden;
