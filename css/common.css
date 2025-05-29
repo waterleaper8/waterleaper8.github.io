@@ -29,3 +29,7 @@ footer a {
   color: #717171;
   font-family: "Zen Maru Gothic"!important;
 }
+
+.shadow-bold {
+  text-shadow: black 0px 0px 0.5px, black 0px 0px 0.5px;
+}
