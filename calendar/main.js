@@ -34,6 +34,9 @@ function addDays(monthDiff) {
     const tr = document.createElement('tr');
     const td = document.createElement('td');
     td.textContent = `${mm}/${dd}(${wd})`;
+    if (dt.getMonth() === todayDate.getMonth() && dt.getDate() === todayDate.getDate()) {
+      td.classList.add("bg-secondary", "text-white")
+    }
     if (wd === "土") {
       td.classList.add("text-primary")
     } else if (wd === "日") {
