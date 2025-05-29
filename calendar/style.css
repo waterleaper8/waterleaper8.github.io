@@ -1,0 +1,7 @@
+tr {
+  font-size: 13px;
+}
+tr.yymm {
+  font-size: 17px;
+  font-weight: bold;
+}
