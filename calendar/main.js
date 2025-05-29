@@ -14,7 +14,7 @@ function addDays(monthDiff) {
   const yymmTh = document.createElement("th")
 
   yymmTr.setAttribute('class', "yymm")
-  yymmTh.innerHTML = `<br>${yy}/${String(month + 1).padStart(2, '0')}`;
+  yymmTh.innerHTML = `${yy}/${String(month + 1).padStart(2, '0')}`;
   yymmTr.appendChild(yymmTh);
 
   const calendarBody = document.createElement('tbody');
