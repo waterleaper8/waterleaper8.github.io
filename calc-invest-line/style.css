@@ -13,9 +13,6 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, li, span, td, th, input {
 .card {
   width: 45%;
 }
-#card-last {
-  margin-bottom: 120px;
-}
 /* タブレット（幅 768px ～ 992px） */
 @media (max-width: 992px) and (min-width: 768px) {
   .input-group .input-group-text {
