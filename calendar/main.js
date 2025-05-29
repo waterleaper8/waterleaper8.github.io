@@ -1,7 +1,4 @@
 function addDays(monthDiff) {
-  const calendarBody = document.getElementById('calendar-body');
-  if (!calendarBody) return;
-
   const todayDate = new Date();
   const todayYear = todayDate.getFullYear();
   const todayMonth = todayDate.getMonth();                 // 0 = 1月, …, 11 = 12月
@@ -14,11 +11,19 @@ function addDays(monthDiff) {
 
   const yy = String(year)
   const yymmTr = document.createElement('tr');
-  const yymmTd = document.createElement("td")
+  const yymmTh = document.createElement("th")
+
   yymmTr.setAttribute('class', "yymm")
-  yymmTd.innerHTML = `<br>${yy}/${String(month + 1).padStart(2, '0')}`;
-  yymmTr.appendChild(yymmTd);
+  yymmTh.innerHTML = `<br>${yy}/${String(month + 1).padStart(2, '0')}`;
+  yymmTr.appendChild(yymmTh);
+
+  const calendarBody = document.createElement('tbody');
+  const calendarTable = document.createElement('table');
+  const tableWrapper = document.querySelector(".table-wrapper");
+
   calendarBody.appendChild(yymmTr);
+  calendarTable.appendChild(calendarBody);
+  tableWrapper.appendChild(calendarTable);
 
   for (let d = 1; d <= lastDate; d++) {
     const dt = new Date(year, month, d);
