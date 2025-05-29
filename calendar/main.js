@@ -40,6 +40,7 @@ function addDays(monthDiff) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+  addDays(monthDiff=-1)
   addDays(monthDiff=0)
   addDays(monthDiff=1)
 });
