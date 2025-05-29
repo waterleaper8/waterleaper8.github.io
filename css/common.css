@@ -15,6 +15,10 @@ html { visibility: hidden; }
 /* “fonts-loaded” クラスが付与されたら表示 */
 html.fonts-loaded { visibility: visible; }
 
+body {
+  padding-bottom: 60px;
+}
+
 footer {
   background-color: #ececec;
 }
