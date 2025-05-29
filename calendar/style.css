@@ -1,3 +1,8 @@
+html, body, h1, h2, h3, h4, h5, h6, p, a, li, span, td, th, input {
+  letter-spacing: .1em;
+  font-family: Inter, "BIZ UDPGothic", helvetica, "Segoe UI", 游ゴシック体, YuGothic, "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif!important;
+}
+
 tr {
   font-size: 13px;
 }
