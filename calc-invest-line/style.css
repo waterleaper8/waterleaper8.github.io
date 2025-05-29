@@ -2,3 +2,47 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, li, span, td, th, input {
   letter-spacing: .1em;
   font-family: Inter, "BIZ UDPGothic", helvetica, "Segoe UI", 游ゴシック体, YuGothic, "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif!important;
 }
+
+.input-group .input-group-text {
+  flex: 2!important;
+}
+.input-group .form-control,
+.input-group .form-select {
+  flex: 5!important;
+}
+.card {
+  width: 45%;
+}
+#card-last {
+  margin-bottom: 120px;
+}
+/* タブレット（幅 768px ～ 992px） */
+@media (max-width: 992px) and (min-width: 768px) {
+  .input-group .input-group-text {
+    flex: 3!important;  /* 5:7 など好みで変更 */
+  }
+  .input-group .form-control,
+  .input-group .form-select {
+    flex: 7!important;
+  }
+}
+/* スマホ（幅 ≤ 768px） */
+@media (max-width: 768px) {
+  .input-group {
+    /* 縦並び（ラベル上、入力欄下）にするなら flex-direction */
+    flex-direction: column;
+  }
+  .input-group .input-group-text,
+  .input-group .form-control,
+  .input-group .form-select {
+    /* 幅 100% に */
+    flex: none!important;
+    width: 100%!important;
+  }
+  .input-group .input-group-text {
+    margin-bottom: .5rem!important; /* ラベルと入力の間隔 */
+  }
+  .card {
+    width: 100%;
+  }
+}

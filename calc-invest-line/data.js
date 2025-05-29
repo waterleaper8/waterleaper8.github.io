@@ -13,12 +13,12 @@ const initData = () => {
     cardLast.remove()
 
     orgList.forEach((item) => {
-      const newEle = `<div class="card mb-3" style="width: 45%" id=${item.id}><div class="card-body position-relative"><button type="button" style="font-size: 0.7em;" class="btn-sm mt-2 me-2 btn btn-danger position-absolute end-0 top-0 del-btn">✕</button><div class="d-flex justify-content-evenly align-items-center mb-3"><h5 class="card-title">${item.stockName}</h5></div><div class="d-flex justify-content-evenly align-items-center"><div><h6 class="card-subtitle text-muted">取得価額</h6><p class="card-text">${item.purchasePrice}</p></div><div><h6 class="card-subtitle text-danger">利確ライン</h6><p class="card-text">${item.resultUpper}</p></div><div><h6 class="card-subtitle text-primary">損切りライン</h6><p class="card-text">${item.resultLower}</p></div></div></div></div>`
+      const newEle = `<div class="card mb-3" id=${item.id}><div class="card-body position-relative"><button type="button" style="font-size: 0.7em;" class="btn-sm mt-2 me-2 btn btn-danger position-absolute end-0 top-0 del-btn">✕</button><div class="d-flex justify-content-evenly align-items-center mb-3"><h5 class="card-title">${item.stockName}</h5></div><div class="d-flex justify-content-evenly align-items-center"><div><h6 class="card-subtitle text-muted">取得価額</h6><p class="card-text">${item.purchasePrice}</p></div><div><h6 class="card-subtitle text-danger">利確ライン</h6><p class="card-text">${item.resultUpper}</p></div><div><h6 class="card-subtitle text-primary">損切りライン</h6><p class="card-text">${item.resultLower}</p></div></div></div></div>`
       stockData.innerHTML += newEle
     })
     // 銘柄リストの最後に空の銘柄を挿入する
     stockData.innerHTML +=
-      '<div class="card invisible" id="card-last" style="width: 45%"></div>'
+      '<div class="card invisible" id="card-last"></div>'
 
     // 銘柄を削除するトリガー
     const targetList = document.querySelectorAll(".del-btn")
@@ -62,7 +62,7 @@ const addData = () => {
   const cardLast = document.getElementById("card-last")
   cardLast.remove()
 
-  const newEle = `<div class="card mb-3" style="width: 45%" id=${obj.id}><div class="card-body position-relative"><button type="button" style="font-size: 0.7em;" class="btn-sm mt-2 me-2 btn btn-danger position-absolute end-0 top-0 del-btn">✕</button><div class="d-flex justify-content-evenly align-items-center mb-3"><h5 class="card-title">${stockName.value}</h5></div><div class="d-flex justify-content-evenly align-items-center"><div><h6 class="card-subtitle text-muted">取得価額</h6><p class="card-text">${purchasePrice.value}</p></div><div><h6 class="card-subtitle text-danger">利確ライン</h6><p class="card-text">${resultUpper.innerText}</p></div><div><h6 class="card-subtitle text-primary">損切りライン</h6><p class="card-text">${resultLower.innerText}</p></div></div></div></div><div class="card invisible" id="card-last" style="width: 45%"></div>`
+  const newEle = `<div class="card mb-3" id=${obj.id}><div class="card-body position-relative"><button type="button" style="font-size: 0.7em;" class="btn-sm mt-2 me-2 btn btn-danger position-absolute end-0 top-0 del-btn">✕</button><div class="d-flex justify-content-evenly align-items-center mb-3"><h5 class="card-title">${stockName.value}</h5></div><div class="d-flex justify-content-evenly align-items-center"><div><h6 class="card-subtitle text-muted">取得価額</h6><p class="card-text">${purchasePrice.value}</p></div><div><h6 class="card-subtitle text-danger">利確ライン</h6><p class="card-text">${resultUpper.innerText}</p></div><div><h6 class="card-subtitle text-primary">損切りライン</h6><p class="card-text">${resultLower.innerText}</p></div></div></div></div><div class="card invisible" id="card-last"></div>`
   stockData.innerHTML += newEle
 }
 
